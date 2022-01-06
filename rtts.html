@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+<div class="container">
+  <header>
+    <div class="topcoat-navigation-bar">
+      <div class="topcoat-navigation-bar__item center full">
+        <h1 class="topcoat-navigation-bar__title">Gel Konuşalım</h1>
+      </div>
+    </div>
+  </header>
+    <textarea rows="5"
+      id="input1"
+      class="topcoat-textarea mousetrap"
+      placeholder="İçinden geçenleri yaz."
+    ></textarea>
+    <table>
+      <tr>
+        <td><label id="voice-label">
+          Sesi seç : </label> </td>
+      <td><select id="select-voice">
+        <option value="1">Erkek</option>
+        <option value="2">Kadın</option>
+        </select></td>
+    </tr>
+    <tr>
+      <td><label id="speed-label">
+        Konuşma hızını seç : </label></td>
+    <td><div class="wrap"><input id="select-speed" type="range" class="topcoat-range" min="0" max="1.5" value="1" step="0.25" onchange="setSpeed(this.value)" />
+  </tr>
+    </table>
+    <div id="customise-options">
+    </div>
+    <div class="button-row">
+      <button id="speak-button" class="topcoat-button--cta" onclick="startSpeech()">KONUŞ</button>
+      <button id="stop-button" class="topcoat-button" onclick="stopSpeech()">DURDUR</button>
+      
+    </div>
+  </section>
+</div>
+  </body>
+  <script src="rtts/responsivevoice.js"></script>
+  <script type="text/javascript" src="rtts/app.js"></script>
+</html>
