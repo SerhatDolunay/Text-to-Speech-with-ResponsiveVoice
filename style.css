@@ -1,6 +1,6 @@
 :root {
-  --a: #6495ed;
-  --b: #e7f5fc;
+  --black: #111;
+  --white: #e7f5fc;
 }
 * {
   list-style: none;
@@ -29,14 +29,14 @@ body {
 }
 header {
   margin: 1rem;
-  color: #111;
+  color: var(--black);
   text-align: center;
 }
 
 #input1 {
   margin-bottom: 1rem;
   margin-top: 1rem;
-  background-color: var(--b);
+  background-color: var(--white);
   resize: none;
   padding: 0.5rem;
   font-size: 1.5rem;
@@ -47,7 +47,7 @@ header {
 #speed-label {
   padding: 0.5rem;
   margin: 1px;
-  color: #111;
+  color: var(--black);
   font-size: 1rem;
   display: flex;
   gap: 1rem;
@@ -62,52 +62,52 @@ button {
   font-weight: 600;
   margin: 1rem;
   color: #fff;
-  border: 1px solid;
-  border-color: var(--a);
-  background-color: #111;
+  border: 2px solid transparent;
+  background-color: var(--black);
   border-radius: 0.3rem;
-  padding: 0.7rem 2.3rem;
+  padding: 0.6rem 2.1rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 #select-voice {
   padding: 0.2rem;
-  color: #111;
-  background-color: var(--b);
+  color: var(--black);
+  background-color: var(--white);
   border-radius: 0.2rem;
+  cursor: pointer;
 }
 table {
   justify-content: center;
   display: flex;
 }
 button:hover {
-  color: #111;
-  border: 2px solid #111;
+  color: var(--black);
+  border: 2px solid var(--black);
   background-color: transparent;
 }
 
 #select-speed {
-  -webkit-appearance: none; /* Override default look */
+  overflow: hidden;
+  -webkit-appearance: none;
   appearance: none;
-  width: 100%; /* Full-width */
-  height: 20px; /* Specified height */
-  background: var(--b);
+  height: 20px;
+  background: var(--white);
   border-radius: 0.2rem;
   transition: opacity 0.2s;
 }
-#select-speed:hover {
-  opacity: 1;
-}
+
 #select-speed::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   height: 20px;
-  width: 1rem;
-  background: #111;
+  width: 20px;
   border-radius: 0.2rem;
+  background: var(--black);
   cursor: pointer;
+  box-shadow: -100px 0 0 100px #aaa;
 }
 #select-speed::-webkit-slider-thumb:hover {
-  height: 22px;
-  background: #111;
+  background: #444;
 }
 #select-speed::-moz-range-thumb {
   height: 16.8px;
